@@ -10,6 +10,7 @@ The setups steps expect following tools installed on the system.
 - Github
 - Ruby [2.5.0]
 - Rails [6.1.4]
+- Postgres
 
 ##### 1. Check out the repository
 
