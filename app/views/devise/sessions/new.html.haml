@@ -1,0 +1,26 @@
+%main#LOGIN-page
+  %section.Login-main
+    .wrap
+      %h3.text-center.wow.fadeInDown{"data-wow-delay" => "0.0s", "data-wow-duration" => "0.8s"} Administrator Login
+
+      .Login-box
+        - flash.each do |type, message|
+          %div{class: "alert #{bootstrap_class_for(type)} fadeInDown"}
+            %button.close{'data-dismiss' => 'alert'}
+            = simple_format_html message
+
+        = form_for(resource, as: resource_name, url: session_path(resource_name), :method => :post) do |f|
+          .form-group
+            = f.label :email, label: 'Email address'
+            = f.email_field :email, autofocus: true, required: true, class: 'form-control', "aria-describedby": "emailHelp", placeholder: "Enter email"
+
+          .form-group
+            = f.label :password
+            = f.password_field :password, required: true, autocomplete: 'off', class: 'form-control'
+
+          .form-check
+            %label.form-check-label
+              = f.check_box :remember_me, class: 'form-check-input'
+              = f.label :remember_me
+
+          %button.btn.btn-primary.btn-block{:type => "submit"} Submit

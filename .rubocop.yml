@@ -1,0 +1,47 @@
+AllCops:
+  Exclude:
+    - spec/**/*
+    - bin/**/*
+    - db/schema.rb
+    - db/migrate/**
+    - vendor/**/*
+  TargetRubyVersion: 2.5.0
+
+Metrics/LineLength:
+  # Max: 120
+  Enabled: false
+
+FrozenStringLiteralComment:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  # Max: 30
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/IfInsideElse:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Style/MultilineIfModifier:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
