@@ -44,3 +44,5 @@ bundle exec rails s
 ```
 
 And now you can visit the site with the URL http://localhost:3000
+
+Enjoy your coding!
